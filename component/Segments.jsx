@@ -1,8 +1,12 @@
+import { useEffect, useState } from "react";
 const Segments = ({ checks, onClick }) => {
+
     return (
-        <div className="segments-wrapper">
-            {checks.forEach(({ value, key }) => <label className={key ? "active" : "inactive"} key={value} onClick={() => onClick(value)}>{value}</label>)}
-        </div>
+        <div div className="segments-wrapper" >
+            {
+                [...checks.keys()].map(key => <button key={key} className={checks.get(key) ? "active" : "inactive"} onClick={() => { onClick(key) }}>{key}</button>)
+            }
+        </div >
     );
 }
 

@@ -1,0 +1,22 @@
+.segments-wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+.segments-wrapper button{
+  transition: 0.27s;
+  border:solid 1px lightgrey;
+  background-color: white;
+  color: lightgray;
+  font-size: 1.3rem;
+  padding: 5px 12px;
+}
+.segments-wrapper .active{
+  border-color: lightgreen;
+  color: lightgreen;
+  transform: scale(.8);
+}
+
+.segments-wrapper .inactive{
+  border-color: lightgrey;
+  color: lightgray;
+}
