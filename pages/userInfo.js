@@ -9,11 +9,9 @@ const UnerInfo = () => {
     const { store, setStore } = useContext(storeContext);
 
     const handleInput = ({ target }) => {
-        console.log(target.name);
         const userDup = { ...user };
         userDup[target.name] = target.value;
         SetUser(userDup);
-        console.log(user);
     }
     const handlePost = () => {
         const dup = { ...store };
