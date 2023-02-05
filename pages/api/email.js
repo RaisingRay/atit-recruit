@@ -3,8 +3,8 @@ const nodemailer = require("nodemailer");
 export default function handler(req, res) {
     const msg = {
         from: "atitbotnext@gmail.com",
-        to: "mf@atit-sa.com",
-        subject: "Recruit Bot ⚡, "+req.body.status+" Profile",
+        to: "marketing@atit-sa.com",
+        subject: "Recruit Bot ⚡, " + req.body.status + " Profile",
         html: parseResponse(req),
     }
 
@@ -24,9 +24,9 @@ export default function handler(req, res) {
 }
 
 
-const parseResponse=({body})=>{
+const parseResponse = ({ body }) => {
 
-    switch(body.status){
+    switch (body.status) {
         case "Student": return studentResponse(body);
         case "Fresh Graduate": return freshGraduateResponse(body);
         case "Worker": return "";
@@ -34,12 +34,12 @@ const parseResponse=({body})=>{
 
 }
 
-const studentResponse=({status,university,scholar,speciality,IT,user})=>{
-    let skills='';
-    IT.map(ob=>{
-        if(ob.value) skills+=ob.key+" ";
+const studentResponse = ({ status, university, scholar, speciality, IT, user }) => {
+    let skills = '';
+    IT.map(ob => {
+        if (ob.value) skills += ob.key + " ";
     })
-   return `
+    return `
     <b>${user.firstName} ${user.lastName}<b/>
     <br/>
     <br/>
@@ -76,12 +76,12 @@ const studentResponse=({status,university,scholar,speciality,IT,user})=>{
 }
 
 
-const freshGraduateResponse=({status,University,educationLevel,speciality,IT,user})=>{
-    let skills='';
-    IT.map(ob=>{
-        if(ob.value) skills+=ob.key+" ";
+const freshGraduateResponse = ({ status, University, educationLevel, speciality, IT, user }) => {
+    let skills = '';
+    IT.map(ob => {
+        if (ob.value) skills += ob.key + " ";
     })
-   return `
+    return `
     <b>${user.firstName} ${user.lastName}<b/>
     <br/>
     <br/>
