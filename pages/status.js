@@ -10,10 +10,16 @@ const Status = () => {
         setStore(dup);
     }
     return (<>
-        status
-        <Link href={{ pathname: '/university', query: { prevChoice: 'student' } }}><button onClick={() => { handleStatus("Student") }}>Student</button></Link>
-        <Link href={{ pathname: '/university', query: { prevChoice: 'fresh' } }}><button onClick={() => { handleStatus("Fresh Graduate") }}>Fresh Graduate</button></Link>
-        <Link href="/"><button onClick={() => { handleStatus("Worker") }}>Worker</button></Link>
+        <div className="inner-content">
+            <h1>What's your status?</h1>
+            <div className="link-wrapper">
+                <Link href={{ pathname: '/university', query: { prevChoice: 'student' } }}><button onClick={() => { handleStatus("Student") }}>Student</button></Link>
+                <Link href={{ pathname: '/university', query: { prevChoice: 'fresh' } }}><button onClick={() => { handleStatus("Fresh Graduate") }}>Fresh Graduate</button></Link>
+                <Link href="/domain"><button onClick={() => { handleStatus("Worker") }}>Worker</button></Link>
+            </div>
+        </div>
+
+
     </>);
 }
 

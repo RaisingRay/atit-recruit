@@ -21,14 +21,20 @@ const speciality = () => {
         setStore(dup);
     }
 
-    return (<>
-        speciality
-        <Input name="speciality" onChange={handleSpeciality} placehoder="specciality" value={speciality} />
-        {router.query.prevChoice == "scholar" &&
-            <Link href="/it"><button onClick={handlePost}>Next</button></Link>}
-        {router.query.prevChoice == "domain" &&
-            <Link href="/pega">Next</Link>}
-    </>);
+    return (
+        <div className="inner-content">
+
+            <div className="link-wrapper">
+                <h1> What's your speciality?</h1>
+                <Input name="speciality" onChange={handleSpeciality} placehoder="speciality" value={speciality} />
+                {router.query.prevChoice == "scholar" &&
+                    <Link href="/it"><button onClick={handlePost}>Next</button></Link>}
+                {router.query.prevChoice == "itDomain" &&
+                    <Link href="/userInfo"><button onClick={handlePost}>Next</button></Link>} </div>
+
+        </div>
+
+    );
 }
 
 

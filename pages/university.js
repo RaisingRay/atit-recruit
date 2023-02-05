@@ -21,14 +21,18 @@ const University = () => {
         dup.University = university;
         setStore(dup);
     }
-    return (<>
-        University
-        <Input name="university" onChange={handeleUniversity} placeholder="university" value={university} />
-        {router.query.prevChoice == "student" &&
-            <Link href="/scholar"><button onClick={handlePost}>Next</button></Link>}
-        {router.query.prevChoice == "fresh" &&
-            <Link href="/graduation" ><button onClick={handlePost}>Next</button></Link>}
-    </>);
+    return (
+        <div className="inner-content">
+            <h1> What's your university?</h1>
+            <div className="link-wrapper">
+                <Input name="university" onChange={handeleUniversity} placeholder="university" value={university} />
+                {router.query.prevChoice == "student" &&
+                    <Link href="/scholar"><button onClick={handlePost}>Next</button></Link>}
+                {router.query.prevChoice == "fresh" &&
+                    <Link href="/graduation" ><button onClick={handlePost}>Next</button></Link>}
+            </div>
+        </div>
+    );
 }
 
 export default University;

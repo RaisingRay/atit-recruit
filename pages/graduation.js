@@ -26,14 +26,17 @@ const Gruaduation = () => {
         setStore(dup);
 
     }
-    return (<>
-        graduation year
-        <div className="graduate=form">
+    return (
+    <div className="inner-content">
+        <h1>Which graduate you have?</h1>
+        <div className="user-form">
             <Input name="educationLevel" onChange={handleEducation} placehoder="Education Level" value={educationLevel} />
             <Input name="speciality" onChange={handleSpeciality} placehoder="Speciality" value={speciality} />
         </div>
-        <Link href="/it"><button onClick={handlePost}></button></Link>
-    </>);
+        <Link href="/it"><button onClick={handlePost}>Next</button></Link>
+    </div>
+
+   );
 }
 
 export default Gruaduation;

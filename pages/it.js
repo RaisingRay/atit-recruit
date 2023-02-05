@@ -21,17 +21,19 @@ const IT = () => {
         const arr = Array.from(segments, function (entry) {
             return { key: entry[0], value: entry[1] };
         });
-        console.log(arr);
         const dup = { ...store };
         dup.IT = arr;
-        console.log(dup);
         setStore(dup);
 
     }
     return (<>
-        it
-        <Segments checks={segments} onClick={handleSegments} />
-        <Link href="/userInfo"><button onClick={handlePost}>Next</button></Link>
+        <div className="inner-content">
+            <h1>Any IT skills?</h1>
+            <div className="link-wrapper">
+                <Segments checks={segments} onClick={handleSegments} />
+                <Link href="/userInfo"><button onClick={handlePost}>Next</button></Link>
+            </div>
+        </div>
     </>);
 }
 

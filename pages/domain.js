@@ -1,11 +1,16 @@
 import Link from "next/link";
 
 const Domain = () => {
-    return (<>
-        Domain
-        <Link href="/speciality">IT</Link>
-        <Link href="/userInfo">Other</Link>
-    </>);
+    return (
+
+        <div className="content-inner">
+            <h1>What is your work domain?</h1>
+            <div className="link-wrapper-between">
+                <Link href="/itDomain"><button>IT</button></Link>
+                <Link href="/otherDomain"><button> Other </button></Link>
+            </div>
+        </div>
+    );
 }
 
 export default Domain;

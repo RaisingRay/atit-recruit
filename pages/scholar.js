@@ -18,11 +18,14 @@ const Scholar = () => {
         setStore(dup);
     }
     return (
-        <>
-            scholar
-            <Input name="scholar" onChange={handleScholar} placehoder="Scholar" value={scholar} />
-            <Link href={{ pathname: '/speciality', query: { prevChoice: 'scholar' } }} > <button onClick={handlePost}>Next </button></Link>
-        </>);
+        <div className="inner-content">
+            <h1> What's your scholar level?</h1>
+
+            <div className="link-wrapper">
+                <Input name="scholar" onChange={handleScholar} placehoder="Scholar level" value={scholar} />
+                <Link href={{ pathname: '/speciality', query: { prevChoice: 'scholar' } }} > <button onClick={handlePost}>Next </button></Link>
+            </div>
+        </div>);
 }
 
 export default Scholar;
