@@ -1,21 +1,34 @@
 import { storeContext } from "@/store/storeContext";
 import Link from "next/link";
+import Image from "next/image";
 import { useContext } from "react";
 
 const Scan = () => {
-    const {store,setStore} = useContext(storeContext);
+    const { store, setStore } = useContext(storeContext);
     console.log(store);
     return (
         <div className="content-inner">
             <h1>Your application is submitted. Thank you.</h1>
-            <div class="swal-icon swal-icon--success">
-    <span class="swal-icon--success__line swal-icon--success__line--long"></span>
-    <span class="swal-icon--success__line swal-icon--success__line--tip"></span>
-    <div class="swal-icon--success__ring"></div>
-    <div class="swal-icon--success__hide-corners"></div>
-</div>
+            <div className="swal-icon swal-icon--success">
+                <span className="swal-icon--success__line swal-icon--success__line--long"></span>
+                <span className="swal-icon--success__line swal-icon--success__line--tip"></span>
+                <div className="swal-icon--success__ring"></div>
+                <div className="swal-icon--success__hide-corners"></div>
+            </div>
+            <Image className="Hero-ATIT-LOGO-End" src="/logo.png" alt="logo" layout="fill" />
+
+            <div className="end-footer">
+                <p>T, +966554402288</p>
+                <p>King Abdulaziz Road, Al Ghadir -Riyadh</p>
+                <p>1331, Kingdom of Saudi Arabia</p>
+                <p>Contact@atit-sa.com</p>
+                <br />
+                <br />
+                <br />
+                <p>www.atit-sa.com</p>
+            </div>
         </div>
-  );
+    );
 }
 
 export default Scan;

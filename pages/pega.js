@@ -6,9 +6,9 @@ const Pega = () => {
     return (
         <div className="content-inner">
             <h1>Do you know Pega?</h1>
-            <div className="link-wrapper-between">
-            <Link href="/exp"><button>Yes</button></Link>
-            <Link href="/userInfo"><button>No</button></Link>
+            <div className="link-wrapper-between shorter-buttons">
+                <Link href="/exp"><button>Yes</button></Link>
+                <Link href="/userInfo"><button>No</button></Link>
             </div>
         </div>
     );
