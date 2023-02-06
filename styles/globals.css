@@ -83,7 +83,13 @@ input{
   transition: .27s;
   font-size: 1.2rem;
 }
-
+.react-dropdown-select{
+  border:solid 2px #1e272e !important;
+  border-radius: 5px!important ;
+  padding: 6px 12px!important;
+  transition: .27s!important;
+  font-size: 1.2rem!important;
+}
 input:focus{
   outline: none;
   border:solid 2px #27ae60;
