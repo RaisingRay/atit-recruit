@@ -1,16 +1,22 @@
 import { storeContext } from "@/store/storeContext";
 import Link from "next/link";
 import Image from "next/image";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 
 const Scan = () => {
     const { store, setStore } = useContext(storeContext);
+    const fire = useRef(false);
 
-    useEffect(()=>{
-        setTimeout(()=>{window.location.href="/"},2000);
+    useEffect(() => {
+        if (fire.current) return;
+        fire.current = true;
+        // setTimeout(() => { window.location.href = "/" }, 2000);
+        let cvs = JSON.parse(localStorage.getItem('cvs'));
+        if (!cvs) cvs = [];
+        cvs.push(store);
+        localStorage.setItem('cvs', JSON.stringify(cvs));
+    }, []);
 
-    },[]);
-    
     return (
         <div className="content-inner">
             <h1>Your application is submitted. Thank you.</h1>

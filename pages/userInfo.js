@@ -10,16 +10,16 @@ const UnerInfo = () => {
     const [user, SetUser] = useState({});
     const { store, setStore } = useContext(storeContext);
     const options = [
-        { 
-          value: 1,
-          label: "Leanne Graham"
+        {
+            value: 1,
+            label: "Leanne Graham"
         },
         {
-          value:  2,
-          label: "Ervin Howell"
+            value: 2,
+            label: "Ervin Howell"
         }
-      ];
-      const country=[
+    ];
+    const country = [
         {
             value: "4",
             "alpha_2_code": "AF",
@@ -1771,7 +1771,7 @@ const UnerInfo = () => {
         SetUser(userDup);
     }
 
-    const handleCountry=(value)=>{
+    const handleCountry = (value) => {
         const userDup = { ...user };
         userDup["coutryOfResidence"] = value;
         SetUser(userDup);
@@ -1781,9 +1781,17 @@ const UnerInfo = () => {
         const dup = { ...store };
         dup.user = user;
         setStore(dup);
+        console.log('the store', store);
+        axios.defaults.headers.common = {
+            "Content-Type": "application/json"
+        }
+        try {
 
-        const response = await axios.post('api/email', dup);
-        console.log(response);
+            const response = await axios.post('https://mailsender-sable.vercel.app/api/mail', dup);
+            console.log(response);
+        } catch (e) {
+            console.log(e);
+        }
     }
     return (
         <div className="inner-content">
@@ -1801,7 +1809,7 @@ const UnerInfo = () => {
         </div>
 
     );
-   
+
 }
 
 export default UnerInfo;
