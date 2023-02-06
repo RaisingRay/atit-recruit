@@ -1,11 +1,16 @@
 import { storeContext } from "@/store/storeContext";
 import Link from "next/link";
 import Image from "next/image";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 
 const Scan = () => {
     const { store, setStore } = useContext(storeContext);
-    console.log(store);
+
+    useEffect(()=>{
+        setTimeout(()=>{window.location.href="/"},5000)
+
+    },[]);
+    
     return (
         <div className="content-inner">
             <h1>Your application is submitted. Thank you.</h1>
