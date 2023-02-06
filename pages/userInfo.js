@@ -30,7 +30,7 @@ const UnerInfo = () => {
                 <Input name="lastName" onChange={handleInput} placehoder="Last Name" value={user["lastName"]} />
                 <Input name="phone" onChange={handleInput} placehoder="Phone" value={user["phone"]} />
                 <Input name="email" onChange={handleInput} placehoder="Email" value={user["email"]} />
-                <Input name="nationality" onChange={handleInput} placehoder="Nationality" value={user["nationality"]} />
+                {/* <Input name="nationality" onChange={handleInput} placehoder="Nationality" value={user["nationality"]} /> */}
                 <Input name="coutryOfResidence" onChange={handleInput} placehoder="Coutry Of Residence" value={user["coutryOfResidence"]} />
             </div>
             <Link href="/scan"><button onClick={handlePost}>Next </button></Link>
