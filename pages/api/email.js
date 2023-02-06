@@ -1,5 +1,5 @@
 const nodemailer = require("nodemailer");
-const fs =require('fs');
+const fs = require('fs');
 export default function handler(req, res) {
 
     const msg = {
@@ -19,7 +19,7 @@ export default function handler(req, res) {
         host: 'smtp.gmail.com',
     }).sendMail(msg, (err) => {
         if (err) { console.log('err', err) }
-      
+
     })
     res.status(200).json(req.body);
 }
