@@ -5,6 +5,7 @@ import { useState } from "react"
 import Image from "next/image";
 export default function Layout({ children }) {
     const [store, setStore] = useState();
+    
     return (
         <>
             <React.StrictMode>

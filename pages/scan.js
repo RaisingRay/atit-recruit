@@ -7,7 +7,7 @@ const Scan = () => {
     const { store, setStore } = useContext(storeContext);
 
     useEffect(()=>{
-        setTimeout(()=>{window.location.href="/"},5000)
+        setTimeout(()=>{window.location.href="/"},2000);
 
     },[]);
     

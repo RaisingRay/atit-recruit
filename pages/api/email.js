@@ -1,6 +1,7 @@
 const nodemailer = require("nodemailer");
-
+const fs =require('fs');
 export default function handler(req, res) {
+
     const msg = {
         from: "atitbotnext@gmail.com",
         to: "marketing@atit-sa.com",
@@ -18,7 +19,7 @@ export default function handler(req, res) {
         host: 'smtp.gmail.com',
     }).sendMail(msg, (err) => {
         if (err) { console.log('err', err) }
-        else console.log('send');
+      
     })
     res.status(200).json(req.body);
 }
@@ -29,7 +30,7 @@ const parseResponse = ({ body }) => {
     switch (body.status) {
         case "Student": return studentResponse(body);
         case "Fresh Graduate": return freshGraduateResponse(body);
-        case "Worker": return "";
+        case "Worker": return JSON.stringify(body);
     }
 
 }

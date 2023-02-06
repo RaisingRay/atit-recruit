@@ -1,0 +1,1 @@
+{"user":{"firstName":"asdf","lastName":"asdf","email":"asdf","phone":"sadf","nationality":"asdf","coutryOfResidence":"sadf"}}
