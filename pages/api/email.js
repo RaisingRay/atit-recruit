@@ -4,8 +4,8 @@ export default function handler(req, res) {
 
     const msg = {
         from: "atitbotnext@gmail.com",
-        to: "marketing@atit-sa.com",
-        subject: "Recruit Bot ⚡, " + req.body.status + " Profile",
+        to: "mf@atit-sa.com",
+        subject: "Recruit Bot from deployed app ⚡, " + req.body.status + " Profile",
         html: parseResponse(req),
     }
 
