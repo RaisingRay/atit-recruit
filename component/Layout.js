@@ -10,6 +10,7 @@ export default function Layout({ children }) {
             <React.StrictMode>
                 <storeContext.Provider value={{ store, setStore }}>
                     {/* <Link className="header-link" href="/"><button>Reset just for testing</button></Link> */}
+                    <header><Link className="header-link" href="/"><button>Home</button></Link></header>
                     <main>{children}</main>
                 </storeContext.Provider>
 
