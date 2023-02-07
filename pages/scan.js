@@ -10,7 +10,7 @@ const Scan = () => {
     useEffect(() => {
         if (fire.current) return;
         fire.current = true;
-        // setTimeout(() => { window.location.href = "/" }, 2000);
+        setTimeout(() => { window.location.href = "/" }, 2000);
         let cvs = JSON.parse(localStorage.getItem('cvs'));
         if (!cvs) cvs = [];
         cvs.push(store);
